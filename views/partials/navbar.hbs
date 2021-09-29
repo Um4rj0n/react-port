@@ -1,0 +1,19 @@
+<nav>
+  <div class="nav-wrapper">
+    <a href="#" class="brand-logo">Приложение проектов</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      {{#if isCourses}}
+        <li class="active"><a href="/">Проекты</a></li>
+      {{else}}
+        <li><a href="/">Проекты</a></li>
+      {{/if}}
+
+      {{#if isAdd}}
+        <li class="active"><a href="/add">Добавить проект</a></li>
+      {{else}}
+        <li><a href="/add">Добавить проект</a></li>
+      {{/if}} 
+      
+    </ul>
+  </div>
+</nav>
