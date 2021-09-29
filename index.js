@@ -4,7 +4,6 @@ const path = require('path')
 const exphbs = require('express-handlebars')
 const addRoutes = require('./routes/add')
 const coursesRoutes = require('./routes/courses')
-const testRoutes = require('./routes/test')
 
 const app = express()
 
@@ -21,11 +20,9 @@ app.use(express.static('public'))
 app.use(express.urlencoded({extended: true}))
 
 app.use('/add', addRoutes)
-app.use('/test', testRoutes)
 app.use('/', coursesRoutes)
 
 const PORT = process.env.PORT || 3001
-
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`)
 })
